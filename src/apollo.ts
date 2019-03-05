@@ -10,6 +10,7 @@ const client = new ApolloClient({
     },
     resolvers: {
       Mutation: {
+        // parent, context, ...
         logUserIn: (_, { token }, { cache }) => {
           localStorage.setItem("jwt", token);
           cache.writeData({
@@ -36,6 +37,7 @@ const client = new ApolloClient({
       }
     }
   },
+  // 모든 graphql 요청시 여기를 걸친다!
   request: async (operation: Operation) => {
     operation.setContext({
       headers: {

@@ -2,10 +2,10 @@ import reset from "styled-reset";
 import { createGlobalStyle } from "./typed-components";
 
 // tslint:disable-next-line:no-unused-expression
-createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
-
 ${reset}
+
 *{
     box-sizing:border-box;
 }
@@ -22,3 +22,5 @@ button{
  &:active{outline:none}   
 }
 `;
+
+export default GlobalStyle;
