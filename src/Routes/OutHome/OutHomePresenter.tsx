@@ -8,6 +8,6 @@ interface IProps extends RouteComponentProps {
 
 // RouteComponentProps<Param에 대한 타입 인터페이스> : { location, history, match, staticContext }
 const OutHomePresenter:React.SFC<IProps> = ({}) => 
-;
+; 
 
 export default OutHomePresenter;
